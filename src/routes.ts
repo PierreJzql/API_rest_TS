@@ -58,7 +58,7 @@ function wordLimit (limit: number){
 
             if(totalWord > limit){
 
-                return res.status(402).json({message: "Payement Required"});
+                return res.status(402).json({message: "Payment Required"});
 
             }
 
