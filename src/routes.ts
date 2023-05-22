@@ -44,9 +44,11 @@ function autoriseToken(req: Request, res: Response, next: NextFunction){
     })
 }
 
-router.post("/justify", express.text(), autoriseToken, (req,res) => {
+router.post("/justify", express.text(), autoriseToken, (req: Request,res: Response) => {
     const textToJustify: string = req.body;
-    const justifiedText: string = justify(textToJustify);
+    const justifiedText: string = justify(textToJustify,80);
+    console.log(justifiedText);
+    res.type("text/plain");
     res.send(justifiedText);
 });
 
