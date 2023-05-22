@@ -8,7 +8,7 @@ dotenv.config()
 
 
 const app: Express = express();
-const port: number = parseInt(process.env.PORT);
+const port: number = parseInt(process.env.PORT) || 8080;
 
 // const app = express();
 // const port: string = process.env.PORT;
